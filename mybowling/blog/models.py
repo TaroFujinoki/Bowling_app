@@ -1,8 +1,8 @@
 from django.conf import settings
-from django.db import models 
+from django.db import models
 from django.utils import timezone
 
-class Post(models.model):
+class Post(models.Model):
     author = models.ForeignKey(setting.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length = 200)
     text = model.TextField()
